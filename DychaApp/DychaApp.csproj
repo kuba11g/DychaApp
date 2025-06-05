@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F50F2FC7-B380-4D8D-B508-DFB76714420F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DychaApp</RootNamespace>
+    <AssemblyName>DychaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FireSharp, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Panels\CalculatorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\CalculatorPanel.Designer.cs">
+      <DependentUpon>CalculatorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\LoginPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\MainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\MyWalletPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\MyWalletPanel.Designer.cs">
+      <DependentUpon>MyWalletPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\RegisterPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\RegisterPanel.Designer.cs">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SearchResultCalculatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SearchResultCalculatorControl.Designer.cs">
+      <DependentUpon>SearchResultCalculatorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SearchResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SearchResultControl.Designer.cs">
+      <DependentUpon>SearchResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\WelcomePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\WelcomePanel.Designer.cs">
+      <DependentUpon>WelcomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Class\DatabaseConnection.cs" />
+    <Compile Include="Resources\Class\StockConnection.cs" />
+    <Compile Include="Resources\Class\StockSymbolLoader.cs" />
+    <EmbeddedResource Include="Panels\CalculatorPanel.resx">
+      <DependentUpon>CalculatorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\MyWalletPanel.resx">
+      <DependentUpon>MyWalletPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\RegisterPanel.resx">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SearchResultCalculatorControl.resx">
+      <DependentUpon>SearchResultCalculatorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SearchResultControl.resx">
+      <DependentUpon>SearchResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\WelcomePanel.resx">
+      <DependentUpon>WelcomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Font\Montserrat.ttf" />
+    <None Include="Resources\StockData\nasdaq.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <Content Include="Resources\Image\logo.ico" />
+    <Content Include="Resources\Image\logo.png" />
+    <Content Include="Resources\Image\password.png" />
+    <Content Include="Resources\Image\stock_ %281%29.png" />
+    <Content Include="Resources\Image\stock_ %282%29.png" />
+    <Content Include="Resources\Image\stock_ %283%29.png" />
+    <Content Include="Resources\Image\stock_ %284%29.png" />
+    <Content Include="Resources\Image\stock_ %285%29.png" />
+    <Content Include="Resources\Image\stock_ %286%29.png" />
+    <Content Include="Resources\Image\stock_ %287%29.png" />
+    <Content Include="Resources\Image\stock_ %288%29.png" />
+    <Content Include="Resources\Image\stock_ %289%29.png" />
+    <Content Include="Resources\Image\sublogo.png" />
+    <Content Include="Resources\Image\user.png" />
+    <Content Include="Resources\StockData\nasdaq.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>
